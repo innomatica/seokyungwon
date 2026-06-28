@@ -13,8 +13,8 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 			adapter: adapter({
-				pages: 'build',
-				assets: 'build',
+				pages: 'docs',
+				assets: 'docs',
 				fallback: '404.html',
 				precompress: false,
 				strict: true
