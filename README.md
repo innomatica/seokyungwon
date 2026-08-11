@@ -49,7 +49,7 @@ cd static
 touch .nojekyll
 ```
 
-## Deploy via GitHub Actions: `.github/workflows/deploy.yml`
+## Deploy via GitHub Actions: `/.github/workflows/deploy.yml`
 ```
 name: Deploy to GitHub Pages
 
