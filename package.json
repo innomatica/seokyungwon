@@ -7,11 +7,6 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-<<<<<<< HEAD
-=======
-		"deploy": "gh-pages -d build --cname seokyungwon.com",
-		"delete-gh-pages-cache": "gh-pages-clean",
->>>>>>> 8c974be (wip)
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
