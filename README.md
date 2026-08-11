@@ -55,7 +55,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main' # Triggers when you push to the main branch
+    branches: ["main"] # Triggers when you push to the main branch
 
 permissions:
   contents: read
@@ -100,4 +100,15 @@ jobs:
 
 ## Configure GitHub Pages Settings
 
-Pages > Build and deployment > GitHub Actions
+### Use GitHub Actions to deploy
+
+* Pages > Build and deployment > GitHub Actions
+
+### [Verifying your custom domain for GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
+
+* Create TXT record
+
+### [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+
+* Create A and AAAA records
+* Create CNAME record for www
