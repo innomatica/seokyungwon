@@ -3,6 +3,7 @@
 </script>
 
 <a href="{base}/">Home</a>
-<a href="{base}/about">About</a>
+<a href="{base}/en">English</a>
+<a href="{base}/en">Korean</a>
 
 English Page
