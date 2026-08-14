@@ -21,6 +21,7 @@ export default defineConfig({
 			}),
 			paths: {
 				base: process.argv.includes('dev') ? '' : '/seokyungwon'
+				// base: process.env.NODE_ENV === 'production' ? '/your-repo-name' : '',
 			}
 		})
 	]

@@ -3,6 +3,7 @@
 	import { browser } from '$app/environment';
 	import { getCookie, setCookie } from '$lib/cookies';
 	import { onMount } from 'svelte';
+	import { asset } from '$app/paths';
 
 	import {
 		type ResumeItem,
@@ -111,7 +112,7 @@
 		<div class="relative flex justify-center bg-cover pt-8">
 			<img
 				class="border-base-100 z-10 h-48 w-48 rounded-full border-4 object-cover"
-				src={'/images/aiony-haust.jpg'}
+				src={asset('/images/aiony-haust.jpg')}
 				alt="Aiony Haust"
 			/>
 			<div
