@@ -15,8 +15,10 @@
 	import AionyHaust from '$lib/assets/aiony-haust.jpg';
 	import Phone from '$lib/icons/phone.svelte';
 	import Envelope from '$lib/icons/envelope.svelte';
+	import Qrcode from '$lib/icons/qrcode.svelte';
 
 	let lang: string = $state('kr');
+	let dlgQrCode: HTMLDialogElement;
 
 	onMount(() => {
 		if (browser) {
@@ -55,7 +57,9 @@
 			</div>
 		</div>
 	</header> -->
-	<div class="join absolute top-4 right-4">
+
+	<!-- language select -->
+	<div class="join absolute top-4 right-16">
 		<input
 			class="join-item btn btn-xs btn-soft"
 			type="radio"
@@ -72,6 +76,13 @@
 			value="en"
 			bind:group={lang}
 		/>
+	</div>
+	<!-- qrcode -->
+	<div class=" absolute top-4 right-4">
+		<button
+			class="btn btn-xs btn-circle btn-primary btn-soft"
+			onclick={() => dlgQrCode?.showModal()}><Qrcode /></button
+		>
 	</div>
 
 	<div class="relative grid grid-cols-1 gap-6 sm:grid-cols-[300px_500px]">
@@ -100,7 +111,7 @@
 		<div class="relative flex justify-center bg-cover pt-8">
 			<img
 				class="border-base-100 z-10 h-48 w-48 rounded-full border-4 object-cover"
-				src={AionyHaust}
+				src={'/images/aiony-haust.jpg'}
 				alt="Aiony Haust"
 			/>
 			<div
@@ -278,3 +289,17 @@
 		{/if}
 	</div>
 {/snippet}
+
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog class="modal" bind:this={dlgQrCode}>
+	<div class="modal-box">
+		<div class="p-2 text-center">https://www.seokyungwon.com</div>
+		<div>
+			<img src="/images/urlqrcode.png" alt="url qr code" />
+		</div>
+	</div>
+	<form method="dialog" class="modal-backdrop">
+		<button>close</button>
+	</form>
+</dialog>

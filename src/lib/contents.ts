@@ -211,7 +211,7 @@ export const advisories: ResumeSection = {
 		{
 			period: '현재',
 			title: '자문위원',
-			org: '보건복지부 K-ARPHA'
+			org: '보건복지부 한국형 ARPA-H 연구개발사업'
 		},
 		{
 			period: '현재',
