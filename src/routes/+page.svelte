@@ -297,7 +297,7 @@
 	<div class="modal-box">
 		<div class="p-2 text-center">https://www.seokyungwon.com</div>
 		<div>
-			<img src="/images/urlqrcode.png" alt="url qr code" />
+			<img src={asset('/images/urlqrcode.png')} alt="url qr code" />
 		</div>
 	</div>
 	<form method="dialog" class="modal-backdrop">
