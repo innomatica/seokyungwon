@@ -28,28 +28,35 @@ export default defineConfig({
 });
 ```
 
-## Handle Static Route Link: `<a>`
+## Handle Static Routes
+
 ```
 <script>
-	import { base } from '$app/paths';
+	import { asset, resolve } from '$app/paths';
 </script>
 
-<a href="{base}/">Home</a>
-<a href="{base}/about">About</a>
+/* /src/routes/about */
+<a href={resolve("/about")}>About</a>
+
+/* /static/images/my_image.jpg */
+<img src={asset("/images/my_image.jpg")} />
 ```
 
 ## Enable Prerendering: `/src/+layout.ts`
+
 ```
 export const prerender = true;
 ```
 
 ## Bypass Jekyll: `/static/.nojekyll`
+
 ```
 cd static
 touch .nojekyll
 ```
 
 ## Deploy via GitHub Actions: `/.github/workflows/deploy.yml`
+
 ```
 name: Deploy to GitHub Pages
 
@@ -102,13 +109,13 @@ jobs:
 
 ### Use GitHub Actions to deploy
 
-* Pages > Build and deployment > GitHub Actions
+- Pages > Build and deployment > GitHub Actions
 
 ### [Verifying your custom domain for GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages)
 
-* Create TXT record
+- Create TXT record
 
 ### [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
 
-* Create A and AAAA records
-* Create CNAME record for www
+- Create A and AAAA records
+- Create CNAME record for www
