@@ -137,8 +137,8 @@
 		<div class="relative flex justify-center bg-cover pt-8">
 			<img
 				class="border-base-100 z-10 h-48 w-48 rounded-full border-4 object-cover"
-				src={asset('/images/aiony-haust.jpg')}
-				alt="Aiony Haust"
+				src={asset('/images/portrait.jpg')}
+				alt="Seo Kyung-Won"
 			/>
 			<div
 				class="bg-primary absolute inset-0 -mb-1"
@@ -164,7 +164,7 @@
 
 <!-- contact -->
 {#snippet contact(lang: string = 'kr')}
-	<div class="bg-primary text-primary-content flex flex-col gap-1 p-4">
+	<div class="bg-primary text-primary-content flex flex-col gap-2 p-4">
 		{#if lang === 'en'}
 			<div class="mb-1 font-bold">CONTACT</div>
 			<div class="flex items-center gap-2">
@@ -204,8 +204,8 @@
 {#snippet specialization(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-primary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-primary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
@@ -236,15 +236,15 @@
 {#snippet award(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-primary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-primary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
 				HONORS AND AWARDS
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.awards.en as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -254,7 +254,7 @@
 				수상경력
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.awards.kr as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -267,15 +267,15 @@
 {#snippet reference(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-prmary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-prmary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
 				PUBLICATIONS
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.references.en as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -285,7 +285,7 @@
 				저서
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.references.kr as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -298,15 +298,15 @@
 {#snippet experience(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-primary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-primary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
 				WORK EXPERIENCE
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.experiences.en as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -316,7 +316,7 @@
 				업무경력
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.experiences.kr as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -329,15 +329,15 @@
 {#snippet advisory(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-primary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-primary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
 				ADVISORY & BOARD MEMBERSHIPS
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.advisories.en as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -347,7 +347,7 @@
 				자문경력
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.advisories.kr as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -360,15 +360,15 @@
 {#snippet education(left: boolean, lang: string = 'kr')}
 	<div
 		class={left
-			? 'bg-primary text-primary-content flex flex-col gap-1 p-4'
-			: 'flex flex-col gap-1 p-4'}
+			? 'bg-primary text-primary-content flex flex-col gap-2 p-4'
+			: 'flex flex-col gap-2 p-4'}
 	>
 		{#if lang === 'en'}
 			<div class={left ? 'text-primary-content mb-1 font-bold' : 'text-primary mb-1 font-bold'}>
 				EDUCATION
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.educations.en as item}
 					{@render twolineitem(item)}
 				{/each}
@@ -378,7 +378,7 @@
 				교육
 			</div>
 			<hr class={left ? 'text-primary-content' : 'text-primary'} />
-			<div class="flex flex-col gap-2">
+			<div class="flex flex-col gap-3">
 				{#each cv.educations.kr as item}
 					{@render twolineitem(item)}
 				{/each}
